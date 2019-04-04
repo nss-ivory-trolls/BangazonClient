@@ -33,7 +33,11 @@ export default class ApplicationViews extends Component {
     render() {
         return (
             <React.Fragment>
-                <p>Hello bitches</p>
+                {
+                    this.state.customer.map(c => {
+                        return <p key={c.id}>{c.firstName}</p>
+                    })
+                }
             </React.Fragment>
         );
     }
